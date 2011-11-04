@@ -380,6 +380,7 @@ texmf. PTeX is distributed as WEB change files.
 %doc %{_texmfdistdir}/source/platex/base/plnews08.tex
 %doc %{_texmfdistdir}/source/platex/base/plpatch.ltx
 %doc %{_texmfdistdir}/source/platex/base/plvers.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -392,6 +393,8 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/ptex <<EOF
 ptex ptex - ptex.ini
