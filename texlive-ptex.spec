@@ -16,7 +16,8 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.doc.tar.xz
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Requires:	texlive-tex
 Requires:	texlive-latex
 Requires:	texlive-hyph-utf8
@@ -41,9 +42,8 @@ texmf. PTeX is distributed as WEB change files.
     %_texmf_mktexlsr_pre
 
 %post
-    %_texmf_fmtutil_post
-    %_texmf_updmap_post
     %_texmf_mktexlsr_post
+    %_texmf_updmap_post
 
 %preun
     if [ $1 -eq 0 ]; then
@@ -54,9 +54,8 @@ texmf. PTeX is distributed as WEB change files.
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_fmtutil_post
-	%_texmf_updmap_post
 	%_texmf_mktexlsr_post
+	%_texmf_updmap_post
     fi
 
 #-----------------------------------------------------------------------
