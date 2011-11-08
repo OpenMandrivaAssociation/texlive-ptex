@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20100908
-Release:	1
+Release:	2
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -57,6 +57,8 @@ texmf. PTeX is distributed as WEB change files.
 	%_texmf_mktexlsr_post
 	%_texmf_updmap_post
     fi
+    rm -fr %{_texmfvardir}/web2c/eptex
+    rm -fr %{_texmfvardir}/web2c/ptex
 
 #-----------------------------------------------------------------------
 %files
