@@ -1,4 +1,4 @@
-# revision 24450
+# revision 24539
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2010-09-08 12:29:06 +0200
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20100908
-Release:	2
+Release:	3
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -18,17 +18,18 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
+Requires(post):	texlive-tetex
 Requires:	texlive-tex
 Requires:	texlive-latex
 Requires:	texlive-hyph-utf8
 Requires:	texlive-adobemapping
 Requires:	texlive-ipaex
 Requires:	texlive-japanese
+Requires:	texlive-japanese-otf
 Requires:	texlive-ptex.bin
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 Conflicts:	texlive-source <= 20110705-3
-Requires(post):	texlive-tetex
 
 %description
 PTeX adds features related to vertical writing, and deals with
@@ -43,6 +44,7 @@ texmf. PTeX is distributed as WEB change files.
 
 %post
     %_texmf_mktexlsr_post
+    %_texmf_fmtutil_post
     %_texmf_updmap_post
 
 %preun
@@ -55,6 +57,7 @@ texmf. PTeX is distributed as WEB change files.
 %postun
     if [ $1 -eq 0 ]; then
 	%_texmf_mktexlsr_post
+	%_texmf_fmtutil_post
 	%_texmf_updmap_post
     fi
     rm -fr %{_texmfvardir}/web2c/eptex
