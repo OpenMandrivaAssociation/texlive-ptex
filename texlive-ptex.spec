@@ -1,12 +1,12 @@
-# revision 24539
+# revision 24627
 # category Package
 # catalog-ctan /language/japanese/ptex
-# catalog-date 2010-09-08 12:29:06 +0200
+# catalog-date 2011-11-09 15:33:34 +0100
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-ptex
-Version:	20100908
-Release:	3
+Version:	20111109
+Release:	1
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -284,6 +284,7 @@ texmf. PTeX is distributed as WEB change files.
 %{_texmfdistdir}/tex/platex/base/kinsoku.tex
 %{_texmfdistdir}/tex/platex/base/nidanfloat.sty
 %{_texmfdistdir}/tex/platex/base/oldpfont.sty
+%{_texmfdistdir}/tex/platex/base/pl209.def
 %{_texmfdistdir}/tex/platex/base/platex.ltx
 %{_texmfdistdir}/tex/platex/base/plcore.ltx
 %{_texmfdistdir}/tex/platex/base/pldefs.ltx
@@ -362,7 +363,6 @@ texmf. PTeX is distributed as WEB change files.
 %doc %{_texmfdistdir}/source/platex/base/kinsoku.dtx
 %doc %{_texmfdistdir}/source/platex/base/nidanfloat.dtx
 %doc %{_texmfdistdir}/source/platex/base/nidanfloat.ins
-%doc %{_texmfdistdir}/source/platex/base/pl209.def
 %doc %{_texmfdistdir}/source/platex/base/pl209.dtx
 %doc %{_texmfdistdir}/source/platex/base/pl209.ins
 %doc %{_texmfdistdir}/source/platex/base/platex.dtx
