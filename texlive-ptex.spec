@@ -1,4 +1,4 @@
-# revision 24627
+# revision 24893
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2011-11-09 15:33:34 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20111109
-Release:	1
+Release:	2
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -27,9 +27,6 @@ Requires:	texlive-ipaex
 Requires:	texlive-japanese
 Requires:	texlive-japanese-otf
 Requires:	texlive-ptex.bin
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 PTeX adds features related to vertical writing, and deals with
@@ -38,30 +35,20 @@ TEXMF tree, for use with PTeX, may be found in package PTeX-
 texmf. PTeX is distributed as WEB change files.
 
 %pre
-    %_texmf_fmtutil_pre
-    %_texmf_updmap_pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_fmtutil_post
-    %_texmf_updmap_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_fmtutil_pre
-	%_texmf_updmap_pre
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_fmtutil_post
-	%_texmf_updmap_post
+	%{_sbindir}/texlive.post
     fi
-    rm -fr %{_texmfvardir}/web2c/eptex
-    rm -fr %{_texmfvardir}/web2c/ptex
 
 #-----------------------------------------------------------------------
 %files
@@ -312,7 +299,6 @@ texmf. PTeX is distributed as WEB change files.
 %{_texmfdistdir}/tex/ptex/base/kinsoku.tex
 %{_texmfdistdir}/tex/ptex/base/ptex.tex
 %{_texmfdistdir}/tex/ptex/config/eptex.ini
-%{_texmfdistdir}/tex/ptex/config/language.def
 %{_texmfdistdir}/tex/ptex/config/ptex.ini
 %{_texmfdistdir}/tex/ptexgeneric/config/language.ptx
 %{_texmfdistdir}/tex/ptexgeneric/hyphen/grahyph5.tex
