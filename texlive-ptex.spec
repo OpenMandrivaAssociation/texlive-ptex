@@ -34,16 +34,8 @@ other problems in typesetting Japanese. A set of additions to a
 TEXMF tree, for use with PTeX, may be found in package PTeX-
 texmf. PTeX is distributed as WEB change files.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -370,7 +362,6 @@ texmf. PTeX is distributed as WEB change files.
 %doc %{_texmfdistdir}/source/platex/base/plnews08.tex
 %doc %{_texmfdistdir}/source/platex/base/plpatch.ltx
 %doc %{_texmfdistdir}/source/platex/base/plvers.dtx
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -383,8 +374,6 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/ptex <<EOF
 ptex ptex - ptex.ini
