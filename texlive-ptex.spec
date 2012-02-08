@@ -1,4 +1,4 @@
-# revision 24893
+# revision 25274
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2011-11-09 15:33:34 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20111109
-Release:	3
+Release:	4
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -383,5 +383,5 @@ EOF
 mkdir -p %{buildroot}%{_texmf_updmap_d}
 cat > %{buildroot}%{_texmf_updmap_d}/ptex <<EOF
 KanjiMap morisawa.map
-KanjiMap ptex-@kanjiEmbed@.map
+KanjiMap ptex-@kanjiEmbed@@kanjiVariant@.map
 EOF
