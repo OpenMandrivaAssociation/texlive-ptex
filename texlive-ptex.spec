@@ -1,4 +1,4 @@
-# revision 25274
+# revision 25342
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2011-11-09 15:33:34 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20111109
-Release:	5
+Release:	6
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -45,12 +45,6 @@ texmf. PTeX is distributed as WEB change files.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/fonts/map/dvipdfmx/ptex/morisawa.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-hiragino-04.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-hiragino.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-kozuka-04.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-kozuka.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-morisawa-04.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-morisawa.map
 %{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-noEmbed.map
 %{_texmfdistdir}/fonts/source/ptex/ascgrp/ascgrp.mf
 %{_texmfdistdir}/fonts/source/ptex/ascgrp/ascii.mf
