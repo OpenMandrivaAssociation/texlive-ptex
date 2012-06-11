@@ -1,4 +1,4 @@
-# revision 25342
+# revision 26050
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2011-11-09 15:33:34 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20111109
-Release:	6
+Release:	7
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -286,11 +286,6 @@ texmf. PTeX is distributed as WEB change files.
 %{_texmfdistdir}/tex/ptex/base/ptex.tex
 %{_texmfdistdir}/tex/ptex/config/eptex.ini
 %{_texmfdistdir}/tex/ptex/config/ptex.ini
-%{_texmfdistdir}/tex/ptexgeneric/config/language.ptx
-%{_texmfdistdir}/tex/ptexgeneric/hyphen/grahyph5.tex
-%{_texmfdistdir}/tex/ptexgeneric/hyphen/grmhyph5.tex
-%{_texmfdistdir}/tex/ptexgeneric/hyphen/grphyph5.tex
-%{_texmfdistdir}/tex/ptexgeneric/hyphen/ibyhyph.tex
 %_texmf_fmtutil_d/ptex
 %_texmf_updmap_d/ptex
 %doc %{_texmfdistdir}/doc/ptex/base/COPYRIGHT
@@ -374,7 +369,7 @@ cat > %{buildroot}%{_texmf_fmtutil_d}/ptex <<EOF
 # from ptex:
 ptex ptex - ptex.ini
 eptex eptex language.def *eptex.ini
-platex eptex language.ptx *platex.ini
+platex eptex language.dat *platex.ini
 EOF
 mkdir -p %{buildroot}%{_texmf_updmap_d}
 cat > %{buildroot}%{_texmf_updmap_d}/ptex <<EOF
