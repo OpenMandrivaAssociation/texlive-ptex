@@ -376,3 +376,53 @@ cat > %{buildroot}%{_texmf_updmap_d}/ptex <<EOF
 KanjiMap morisawa.map
 KanjiMap ptex-@kanjiEmbed@@kanjiVariant@.map
 EOF
+
+
+%changelog
+* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-8
++ Revision: 812811
+- Update to latest release.
+
+* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-7
++ Revision: 805064
+- Update to latest release.
+
+* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-6
++ Revision: 779663
+- Update to latest release.
+
+* Tue Feb 21 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-5
++ Revision: 778460
+- Rebuild after tlpobj2spec.pl bug correction.
+
+* Wed Feb 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-4
++ Revision: 772150
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-3
++ Revision: 755523
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111109-2
++ Revision: 745306
+- texlive-ptex
+
+* Tue Nov 22 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111109-1
++ Revision: 732610
+- texlive-ptex
+
+* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-3
++ Revision: 729694
+- texlive-ptex
+
+* Tue Nov 08 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-2
++ Revision: 729090
+- texlive-ptex
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-1
++ Revision: 719410
+- texlive-ptex
+- texlive-ptex
+- texlive-ptex
+- texlive-ptex
+
