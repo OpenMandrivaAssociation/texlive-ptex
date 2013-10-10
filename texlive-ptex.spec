@@ -1,4 +1,4 @@
-# revision 26689
+# revision 31223
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2011-11-09 15:33:34 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20111109
-Release:	8
+Release:	9
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
@@ -45,7 +45,6 @@ texmf. PTeX is distributed as WEB change files.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/fonts/map/dvipdfmx/ptex/morisawa.map
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex/ptex-noEmbed.map
 %{_texmfdistdir}/fonts/source/ptex/ascgrp/ascgrp.mf
 %{_texmfdistdir}/fonts/source/ptex/ascgrp/ascii.mf
 %{_texmfdistdir}/fonts/source/ptex/ascgrp/ascii10.mf
@@ -288,6 +287,8 @@ texmf. PTeX is distributed as WEB change files.
 %{_texmfdistdir}/tex/ptex/config/ptex.ini
 %_texmf_fmtutil_d/ptex
 %_texmf_updmap_d/ptex
+%doc %{_mandir}/man1/mendex.1*
+%doc %{_texmfdistdir}/doc/man/man1/mendex.man1.pdf
 %doc %{_texmfdistdir}/doc/ptex/base/COPYRIGHT
 %doc %{_texmfdistdir}/doc/ptex/base/COPYRIGHT.txt
 %doc %{_texmfdistdir}/doc/ptex/base/Changes.txt
@@ -318,8 +319,6 @@ texmf. PTeX is distributed as WEB change files.
 %doc %{_texmfdistdir}/doc/ptex/pbibtex/jbtxdoc.tex
 %doc %{_texmfdistdir}/doc/ptex/pbibtex/jbtxhak.pdf
 %doc %{_texmfdistdir}/doc/ptex/pbibtex/jbtxhak.tex
-%doc %{_mandir}/man1/mendex.1*
-%doc %{_texmfdir}/doc/man/man1/mendex.man1.pdf
 #- source
 %doc %{_texmfdistdir}/source/platex/base/Changes.txt
 %doc %{_texmfdistdir}/source/platex/base/README.txt
@@ -360,9 +359,9 @@ texmf. PTeX is distributed as WEB change files.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
 mkdir -p %{buildroot}%{_texmf_fmtutil_d}
 cat > %{buildroot}%{_texmf_fmtutil_d}/ptex <<EOF
 #
@@ -376,53 +375,3 @@ cat > %{buildroot}%{_texmf_updmap_d}/ptex <<EOF
 KanjiMap morisawa.map
 KanjiMap ptex-@kanjiEmbed@@kanjiVariant@.map
 EOF
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-8
-+ Revision: 812811
-- Update to latest release.
-
-* Mon Jun 11 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-7
-+ Revision: 805064
-- Update to latest release.
-
-* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-6
-+ Revision: 779663
-- Update to latest release.
-
-* Tue Feb 21 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-5
-+ Revision: 778460
-- Rebuild after tlpobj2spec.pl bug correction.
-
-* Wed Feb 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-4
-+ Revision: 772150
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111109-3
-+ Revision: 755523
-- Rebuild to reduce used resources
-
-* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111109-2
-+ Revision: 745306
-- texlive-ptex
-
-* Tue Nov 22 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111109-1
-+ Revision: 732610
-- texlive-ptex
-
-* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-3
-+ Revision: 729694
-- texlive-ptex
-
-* Tue Nov 08 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-2
-+ Revision: 729090
-- texlive-ptex
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100908-1
-+ Revision: 719410
-- texlive-ptex
-- texlive-ptex
-- texlive-ptex
-- texlive-ptex
-
