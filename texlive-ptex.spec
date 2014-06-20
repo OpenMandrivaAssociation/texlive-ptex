@@ -1,4 +1,4 @@
-# revision 33191
+# revision 33966
 # category Package
 # catalog-ctan /language/japanese/ptex
 # catalog-date 2014-02-26 23:03:13 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ptex
 Version:	20140226
-Release:	2
+Release:	3
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
