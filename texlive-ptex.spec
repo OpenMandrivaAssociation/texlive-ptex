@@ -1,5 +1,5 @@
 Name:		texlive-ptex
-Version:	20180118
+Version:	20180128
 Release:	1
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
