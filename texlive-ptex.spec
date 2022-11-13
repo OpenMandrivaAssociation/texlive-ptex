@@ -1,12 +1,12 @@
 Name:		texlive-ptex
-Version:	20180128
-Release:	2
+Version:	62464
+Release:	1
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,26 +28,24 @@ TEXMF tree, for use with PTeX, may be found in package PTeX-
 texmf. PTeX is distributed as WEB change files.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/map/dvipdfmx/ptex
+#{_texmfdistdir}/fonts/map/dvipdfmx/ptex
 %_texmf_fmtutil_d/ptex
 %_texmf_updmap_d/ptex
-%doc %{_mandir}/man1/mendex.1*
-%doc %{_texmfdistdir}/doc/man/man1/mendex.man1.pdf
-%doc %{_mandir}/man1/makejvf.1*
-%doc %{_texmfdistdir}/doc/man/man1/makejvf.man1.pdf
+%doc %{_mandir}/man1/*.1*
+%doc %{_texmfdistdir}/doc/man/man1/*
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
