@@ -1,6 +1,6 @@
 Name:		texlive-ptex
-Version:	62464
-Release:	2
+Version:	66186
+Release:	1
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
