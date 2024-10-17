@@ -3,7 +3,7 @@ Version:	70058
 Release:	1
 Summary:	A TeX system for publishing in Japanese
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/japanese/ptex
+URL:		https://www.ctan.org/tex-archive/language/japanese/ptex
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ptex.doc.r%{version}.tar.xz
